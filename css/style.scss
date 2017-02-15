@@ -5,7 +5,10 @@ $baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino 
 
 // colors
 $baseColor: #fdfcf6;
-$subColor: #bea300;
+/*$subColor: #bea300;*/
+$subColor: #4cb550;
+$subColor: #339fd1;
+$subColor: #42b9d0;
 $keyColor: #14c0c9;
 $fontColor: #4c4c4c;
 
@@ -52,45 +55,13 @@ a {
 
 /* Header
 ------------------------------------------------------------*/
-.button-contact {
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  border: 2px solid $fontColor;
-  color: $fontColor;
-  text-align: center;
-  display: block;
-  float: right;
-  @include border-radius(4px);
-  font-size: 20px;
-  line-height: 0;
-  margin: 20px 20px 0 0;
-  &:visited {
-    color: $fontColor;
-  }
-}
 header {
   .profile {
-    width: 60%;
-    margin: 0 auto;
-    padding: 60px 0;
-    clear: both;
-  }
-  .site-title {
-    font-size: 1.8rem;
-    line-height: normal;
-    span {
-      display: block;
-      font-size: 4.2rem;
-      color: $keyColor;
-    }
-  }
-  .profile-icon {
-    @include border-radius(50%);
-    margin: 30px auto;
-  }
-  p {
-    font-size: 1.6rem;
+    background-image: url("../images/legs.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
   }
 }
 
@@ -121,7 +92,7 @@ section {
   h2 {
     color: $baseColor;
     margin-bottom: 60px;
-  }
+  }  
   .skill-box {
     @include flex(1);
     margin: 10px 0;
@@ -129,19 +100,6 @@ section {
     background-color: $baseColor;
     @include border-radius(4px);
     @include box-sizing(border-box);
-  }
-  i {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 5px;
-    padding-top: 15px;
-    background-color: $keyColor;
-    font-size: 4.5rem;
-    color: #FFF;
-    text-align: center;
-    @include box-sizing(border-box);
-    @include border-radius(50%);
-    @extend .block-center;
   }
   h3 {
     @extend .abel;
@@ -153,133 +111,40 @@ section {
   }
 }
 
-// Works
-#works {
-  padding-bottom: 0;
-  h2 {
-    margin-bottom: 50px;
-  }
-  .works-box {
-    width: 100%;
-    float: left;
-    height: 100%;
-    a {
-      display: block;
-      position: relative;
-      .works-box-inner {
-        background-color: rgba(0, 0, 0, 0.7);
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        color: #FFF;
-        div {
-          position: absolute;
-          margin: auto;
-          height: 40%;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          padding: 10px 20px;
-        }
-        h3 {
-          font-size: 1.6rem;
-          margin: 0 0 5px;
-          font-weight: bold;
-        }
-        small {
-          font-size: 1rem;
-          display: block;
-          margin-bottom: 15px;
-        }
-        .button-readmore {
-          margin: auto;
-          text-align: center;
-          padding: 5px 0;
-          width: 180px;
-          display: block;
-          color: #FFF;
-          font-weight: bold;
-          background-color: $keyColor;
-          @extend .abel;
-          @extend .uppercase;
-          @include border-radius(4px);
-          font-size: 1rem;
-        }
-      }
-    }
-    img {
-      max-width: 100%;
-      display: block;
-    }
-  }
-  &::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
-
 // Contact
 #contact {
-  ul {
+  h2 {
+    color: $fontColor;
+    margin-bottom: 60px;
+  }
+
+  .button-contact {
+    width: 180px;
+    height: 20px;
+    padding: 10px;
+  /*  border: 2px solid $keyColor;
+    color: $keyColor;*/
+    background-color: $keyColor;
     text-align: center;
-    margin-top: 60px;
-    li {
-      display: inline-block;
-      font-size: 2.8rem;
-      text-align: center;
-      margin-right: 20px;
-      @include box-sizing(border-box);
-      vertical-align: top;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-    .github, .skype {
-      font-size: 3.2rem;
-    }
-    .github i {
-      margin-left: 2px;
-    }
-    a {
-      display: block;
-      width: 50px;
-      height: 50px;
+    display: block;
+    @include border-radius(4px);
+    font-size: 20px;
+    line-height: 20px;
+    margin: auto;
+    &:visited {
+      color: $fontColor;
       color: #FFF;
-      background-color: $keyColor;
-      @include border-radius(50%);
     }
   }
-}
-
-/* Footer
-------------------------------------------------------------*/
-footer {
-  background-color: $subColor;
-  padding: 10px 0;
-  text-align: center;
-  color: #FFF;
 }
 
 // PC
-@media (min-width: 1025px) {
+@media (min-width: 769px) {
   /* Base
   ------------------------------------------------------------*/
   a {
     &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  /* Header
-  ------------------------------------------------------------*/
-  .button-contact {
-    &:hover, &:active {
-      background-color: $fontColor;
-      color: #FFF;
+/*      text-decoration: underline; */
     }
   }
 
@@ -293,37 +158,16 @@ footer {
       margin: 0 10px;
     }
   }
-  // Works
-  #works {
-    .works-box {
-      width: (100% / 3);
-      a {
-        .works-box-inner {
-          display: none;
-          width: 0%;
-          .button-readmore {
-            &:hover {
-              background-color: darken($keyColor, 10%);
-            }
-          }
-        }
-        &:hover {
-          .works-box-inner {
-            display: block;
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
 
   // Contact
   #contact {
-    ul {
-      a {
-        &:hover {
-          background-color: darken($keyColor, 10%);
-        }
+
+    .button-contact {
+  /*    margin-top: 60px;*/
+      &:hover, &:active {
+  /*      background-color: $fontColor;*/
+        background-color: darken($keyColor, 10%);
+        color: #FFF;
       }
     }
   }
