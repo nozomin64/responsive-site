@@ -48,7 +48,7 @@ a {
 ------------------------------------------------------------*/
 header .profile {
   background-image: url("../images/legs.jpg");
-  height: 500px;
+  height: 250px;
   width: 100%;
   background-size: cover;
   background-position: center center; }
@@ -118,6 +118,9 @@ section {
   ------------------------------------------------------------*/
   a:hover {
     /*      text-decoration: underline; */ }
+
+  header .profile {
+    height: 500px; }
 
   #skills .container {
     -webkit-flex-direction: row;
